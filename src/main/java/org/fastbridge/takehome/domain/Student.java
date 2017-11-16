@@ -29,7 +29,7 @@ public class Student {
     private Integer studentId;
 
     @Column
-    private String localId;
+    private String studentStateId;
 
     @Column
     private String firstName;
