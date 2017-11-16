@@ -34,5 +34,7 @@ public class School {
     @OneToMany(mappedBy = "school")
     Set<SchoolClass> classes;
 
+    @Column
+    String stateShortCode;
 
 }
