@@ -29,6 +29,9 @@ public class Student {
     private Integer studentId;
 
     @Column
+    private String localId;
+
+    @Column
     private String firstName;
 
     @Column

@@ -33,6 +33,9 @@ public class Teacher {
     @Column
     private String lastName;
 
+    @Column
+    private String teacherEmail;
+
     @ManyToMany
     @JoinTable(name = "teacher_class_enrollment",
             joinColumns = @JoinColumn(name = "teacher_id", referencedColumnName = "teacher_id"),
