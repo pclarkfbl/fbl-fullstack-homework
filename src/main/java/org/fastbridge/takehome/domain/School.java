@@ -31,6 +31,9 @@ public class School {
     @Column
     private String schoolName;
 
+    /**
+     * List of all classes available in this school
+     */
     @OneToMany(mappedBy = "school")
     Set<SchoolClass> classes;
 

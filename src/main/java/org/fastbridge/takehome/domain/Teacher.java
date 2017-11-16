@@ -36,6 +36,9 @@ public class Teacher {
     @Column
     private String teacherEmail;
 
+    /**
+     * Classes ({@link SchoolClass}) this teacher is responsible for
+     */
     @ManyToMany
     @JoinTable(name = "teacher_class_enrollment",
             joinColumns = @JoinColumn(name = "teacher_id", referencedColumnName = "teacher_id"),

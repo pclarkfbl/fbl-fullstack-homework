@@ -37,6 +37,9 @@ public class Student {
     @Column
     private String lastName;
 
+    /**
+     * Classes {@link SchoolClass} this student is enrolled in
+     */
     @ManyToMany
     @JoinTable(name = "student_class_enrollment",
             joinColumns = @JoinColumn(name = "student_id", referencedColumnName = "student_id"),
