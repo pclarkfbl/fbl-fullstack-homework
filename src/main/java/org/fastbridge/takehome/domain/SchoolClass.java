@@ -28,16 +28,19 @@ public class SchoolClass {
     private Long schoolClassId;
 
     @Column
-    private String name;
+    private String course;
 
-    @ManyToOne(optional = false)
+    @Column
+    private String gradeLevel;
+
+    @ManyToOne
     @JoinColumn(name = "school_id", referencedColumnName = "school_id")
     private School school;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "classEnrollments")
     private Set<Student> enrolledStudents;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "enrolledClasses")
     private Set<Teacher> enrolledTeachers;
 
 }

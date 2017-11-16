@@ -31,7 +31,7 @@ public class School {
     @Column
     private String schoolName;
 
-    @OneToMany
+    @OneToMany(mappedBy = "school")
     Set<SchoolClass> classes;
 
 
