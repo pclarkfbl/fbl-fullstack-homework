@@ -5,8 +5,8 @@
  */
 package org.fastbridge.takehome.controller;
 
-import org.fastbridge.takehome.repository.SchoolRepository;
-import org.fastbridge.takehome.repository.StudentRepository;
+import org.fastbridge.takehome.data.service.SchoolService;
+import org.fastbridge.takehome.data.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -18,19 +18,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class StudentController {
 
-    private final SchoolRepository schoolRepository;
-    private final StudentRepository studentRepository;
+    private final SchoolService schoolService;
+    private final StudentService studentService;
 
     @Autowired
-    public StudentController(SchoolRepository schoolRepository, StudentRepository studentRepository) {
-        this.schoolRepository = schoolRepository;
-        this.studentRepository = studentRepository;
+    public StudentController(SchoolService schoolService, StudentService studentService) {
+        this.schoolService = schoolService;
+        this.studentService = studentService;
     }
 
-    @GetMapping("/studentListings")
+    @GetMapping("/students")
     public String getStudentListings(ModelMap model) {
-        model.put("schools", schoolRepository.findAll());
-        model.put("students", studentRepository.findAll());
+        model.put("schools", schoolService.getAllSchools());
+        model.put("students", studentService.getAllStudents());
         return "studentListings";
     }
 

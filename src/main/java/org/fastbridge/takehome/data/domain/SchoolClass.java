@@ -3,7 +3,7 @@
  * Copyright (c) 2017, FastBridge Learning LLC
  * Created on 11/15/17
  */
-package org.fastbridge.takehome.domain;
+package org.fastbridge.takehome.data.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
