@@ -20,7 +20,11 @@
     + [IDE](#ide)
     + [Non IDE](#non-ide)
   * [Running](#running)
- 
+- [Tasks](#tasks)
+  * [Student listings](#student-listings)
+  * [Display class information](#display-class-information)
+  * [Add student to class](#add-student-to-class)
+   
 ## Background and Context
 ### Context
 
@@ -33,6 +37,8 @@ teachers, who are the students, and which classes are they all in?
 This project is based around building out pages for classroom roster management. We have built out the minimal code-base
 necessary to get you started. Instructions for building and running the code base are below. *Please make sure you have
 read through this file before jumping into the assignment.*
+
+Implementation tasks are the bottom of this file.
 
 ### Good to know concepts
 
@@ -119,3 +125,27 @@ Run `./mvnw install` to install and `./mvnw build` to build the project
 Run this with `./mvnw spring-boot:run` - this command will make the app available on 
 http://localhost:8080/ with an embedded Tomcat and H2 database with data imported using the 
 script in `src/main/resources/data.sql`.
+
+## Tasks
+
+### Student listings
+Modify http://localhost:8080/students to change the list of students when the user switches to a different school. List 
+of students should be updated dynamically without navigating away from the current page or reloading the page.
+
+### Display class information
+On the same page as above, display information about the classes a student may be enrolled in, next to the student.
+
+### Add student to class
+Create a page accessible at http://localhost:8080/add/student/to/class to add an existing or a new student to a class.
+The form fields should be 
+1. Student state ID (text box)
+2. Student's first name (text box)
+3. Student's last name (text box)
+4. School (dropdown; where options are school names)
+4. Class (select dropdown, where options are represented by a string represented by 
+`SchoolClass.course` - `SchoolClass.gradeLevel`; "KGCourse - KG" is an example of such an option).
+
+If the user enters a student state ID for a student that already exists in the system, then student's first name and 
+last name should be auto-populated. A student maybe added to a class only once. If the user tries to add a student that 
+is already enrolled in the class, then the system should fail gracefully and the user should be notified about it.
+Also, a class may not have more than 5 students enrolled in it at any given time.
