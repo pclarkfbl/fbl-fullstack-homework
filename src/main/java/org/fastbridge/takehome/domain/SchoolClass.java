@@ -5,14 +5,11 @@
  */
 package org.fastbridge.takehome.domain;
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 /**
@@ -36,11 +33,5 @@ public class SchoolClass {
     @ManyToOne
     @JoinColumn(name = "school_id", referencedColumnName = "school_id")
     private School school;
-
-    @ManyToMany(mappedBy = "classEnrollments")
-    private Set<Student> enrolledStudents;
-
-    @ManyToMany(mappedBy = "enrolledClasses")
-    private Set<Teacher> enrolledTeachers;
 
 }

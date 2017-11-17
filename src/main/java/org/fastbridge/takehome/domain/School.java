@@ -5,13 +5,10 @@
  */
 package org.fastbridge.takehome.domain;
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 /**
  * @author vivek
@@ -30,12 +27,6 @@ public class School {
 
     @Column
     private String schoolName;
-
-    /**
-     * List of all classes available in this school
-     */
-    @OneToMany(mappedBy = "school")
-    Set<SchoolClass> classes;
 
     @Column
     String stateShortCode;

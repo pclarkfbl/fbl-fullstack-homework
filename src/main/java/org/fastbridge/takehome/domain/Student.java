@@ -6,7 +6,7 @@
 package org.fastbridge.takehome.domain;
 
 
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -44,6 +44,6 @@ public class Student {
     @JoinTable(name = "student_class_enrollment",
             joinColumns = @JoinColumn(name = "student_id", referencedColumnName = "student_id"),
             inverseJoinColumns = @JoinColumn(name = "school_class_id", referencedColumnName = "school_class_id"))
-    private Set<SchoolClass> classEnrollments;
+    private List<SchoolClass> classEnrollments;
 
 }
