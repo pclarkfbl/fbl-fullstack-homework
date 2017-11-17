@@ -5,15 +5,21 @@
  */
 package org.fastbridge.takehome.repository;
 
-import java.util.List;
-
 import org.fastbridge.takehome.domain.School;
 import org.springframework.data.repository.CrudRepository;
 
 /**
+ * Interact with school table in database.
+ *
  * @author vivek
  */
 public interface SchoolRepository extends CrudRepository<School, Integer> {
 
-    List<School> findSchoolsByDistrictId(Integer districtId);
+    /**
+     * Get schools in a district
+     *
+     * @param districtId District to fetch schools for
+     * @return Schools in district
+     */
+    Iterable<School> findSchoolsByDistrictId(Integer districtId);
 }

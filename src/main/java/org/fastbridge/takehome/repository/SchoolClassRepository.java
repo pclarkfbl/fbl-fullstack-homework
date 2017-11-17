@@ -10,10 +10,18 @@ import org.fastbridge.takehome.domain.SchoolClass;
 import org.springframework.data.repository.CrudRepository;
 
 /**
+ * Interact with school_class table in the DB.
+ *
  * @author vivek
  */
 public interface SchoolClassRepository extends CrudRepository<SchoolClass, Long> {
 
+    /**
+     * Get all classes in a school
+     *
+     * @param school School to get classes from
+     * @return Classes in provided school
+     */
     Iterable<SchoolClass> findAllBySchool(School school);
 
 }

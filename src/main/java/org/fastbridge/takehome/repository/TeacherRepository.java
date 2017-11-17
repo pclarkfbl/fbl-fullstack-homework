@@ -9,6 +9,8 @@ import org.fastbridge.takehome.domain.Teacher;
 import org.springframework.data.repository.CrudRepository;
 
 /**
+ * Interact with teacher table in the database
+ *
  * @author vivek
  */
 public interface TeacherRepository extends CrudRepository<Teacher, Integer> {
