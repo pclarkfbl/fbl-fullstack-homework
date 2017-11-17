@@ -8,6 +8,7 @@ package org.fastbridge.takehome.controller;
 import java.util.Collections;
 
 import org.fastbridge.takehome.domain.Student;
+import org.fastbridge.takehome.repository.SchoolClassRepository;
 import org.fastbridge.takehome.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,17 +23,21 @@ public class StudentRESTController {
 
     private final StudentRepository studentRepository;
 
+    private final SchoolClassRepository schoolClassRepository;
+
     @Autowired
-    public StudentRESTController(StudentRepository studentRepository) {
+    public StudentRESTController(StudentRepository studentRepository, SchoolClassRepository schoolClassRepository) {
         this.studentRepository = studentRepository;
+        this.schoolClassRepository = schoolClassRepository;
     }
 
     @GetMapping("/studentListings/in/{schoolId}")
     public Iterable<Student> getStudents(@PathVariable Integer schoolId) {
         if (schoolId == null) {
             return studentRepository.findAll();
+        } else {
+            return Collections.emptyList();
         }
-        return Collections.emptyList();
     }
 
 }
