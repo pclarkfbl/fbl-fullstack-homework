@@ -88,7 +88,7 @@ embedded Tomcat and H2 database with data imported using the script in `src/main
 
 #### H2 console  
 `http://localhost:8080/h2-console/` will give you a helpful webapp to browse around the in memory DB and run queries 
-against it.
+against it. Credentials already present in the login form should work without needing any changes.
 
 #### REST data API browser
 Using [Spring Data REST](https://projects.spring.io/spring-data-rest/) exposes the data in the database through RESTful 
