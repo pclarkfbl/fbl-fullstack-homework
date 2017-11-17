@@ -15,7 +15,6 @@ import javax.persistence.ManyToOne;
 /**
  * @author vivek
  */
-@lombok.Data
 @Entity
 public class SchoolClass {
 
@@ -34,4 +33,35 @@ public class SchoolClass {
     @JoinColumn(name = "school_id", referencedColumnName = "school_id")
     private School school;
 
+    public Long getSchoolClassId() {
+        return schoolClassId;
+    }
+
+    public void setSchoolClassId(Long schoolClassId) {
+        this.schoolClassId = schoolClassId;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public String getGradeLevel() {
+        return gradeLevel;
+    }
+
+    public void setGradeLevel(String gradeLevel) {
+        this.gradeLevel = gradeLevel;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
+    }
 }

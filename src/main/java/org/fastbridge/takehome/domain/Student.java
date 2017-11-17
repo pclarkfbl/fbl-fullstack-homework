@@ -19,7 +19,6 @@ import javax.persistence.ManyToMany;
 /**
  * @author vivek
  */
-@lombok.Data
 @Entity
 public class Student {
 
@@ -46,4 +45,43 @@ public class Student {
             inverseJoinColumns = @JoinColumn(name = "school_class_id", referencedColumnName = "school_class_id"))
     private List<SchoolClass> classEnrollments;
 
+    public Integer getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(Integer studentId) {
+        this.studentId = studentId;
+    }
+
+    public String getStudentStateId() {
+        return studentStateId;
+    }
+
+    public void setStudentStateId(String studentStateId) {
+        this.studentStateId = studentStateId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public List<SchoolClass> getClassEnrollments() {
+        return classEnrollments;
+    }
+
+    public void setClassEnrollments(List<SchoolClass> classEnrollments) {
+        this.classEnrollments = classEnrollments;
+    }
 }

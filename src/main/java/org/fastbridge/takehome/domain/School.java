@@ -13,7 +13,6 @@ import javax.persistence.Id;
 /**
  * @author vivek
  */
-@lombok.Data
 @Entity
 public class School {
 
@@ -31,4 +30,35 @@ public class School {
     @Column
     String stateShortCode;
 
+    public Integer getSchoolId() {
+        return schoolId;
+    }
+
+    public void setSchoolId(Integer schoolId) {
+        this.schoolId = schoolId;
+    }
+
+    public Integer getDistrictId() {
+        return districtId;
+    }
+
+    public void setDistrictId(Integer districtId) {
+        this.districtId = districtId;
+    }
+
+    public String getSchoolName() {
+        return schoolName;
+    }
+
+    public void setSchoolName(String schoolName) {
+        this.schoolName = schoolName;
+    }
+
+    public String getStateShortCode() {
+        return stateShortCode;
+    }
+
+    public void setStateShortCode(String stateShortCode) {
+        this.stateShortCode = stateShortCode;
+    }
 }
