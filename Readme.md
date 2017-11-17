@@ -81,8 +81,9 @@ Run `./mvnw install` to install and `./mvnw build` to build the project
 
 ### Running
 
-Run this with `./mvnw spring-boot:run` - this command will make the app available on `http://localhost:8080/` with an 
-embedded Tomcat and H2 database with data imported using the script in `src/main/resources/data.sql`
+Run this with `./mvnw spring-boot:run` - this command will make the app available on 
+[http://localhost:8080/](http://localhost:8080) with an embedded Tomcat and H2 database with data imported using the 
+script in `src/main/resources/data.sql`.
 
 ### Helpful endpoints
 
