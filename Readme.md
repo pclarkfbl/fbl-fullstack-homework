@@ -1,3 +1,4 @@
+## Background and Context
 ### Context
 
 FastBridge Learning provides a formative assessment product to allow teachers and other classroom staff to quickly and 
@@ -66,25 +67,6 @@ username `sa` and no password. The database is schema is created automatically o
 provided in the entities. Data is imported using the script in `src/main/resources/data.sql` automatically on 
 application startup.
 
-### Setup
-
-#### Dependencies
-JDK 8 is the only dependency needed to build and run this project. Please make sure you have it installed correctly.
-
-#### IDE
-After cloning this repository, import the directory into your favorite IDE as a Maven project. 
-
-#### Non IDE 
-Run `./mvnw install` to install and `./mvnw build` to build the project
-
-
-
-### Running
-
-Run this with `./mvnw spring-boot:run` - this command will make the app available on 
-[http://localhost:8080/](http://localhost:8080) with an embedded Tomcat and H2 database with data imported using the 
-script in `src/main/resources/data.sql`.
-
 ### Helpful endpoints
 
 #### H2 console  
@@ -96,3 +78,21 @@ Using [Spring Data REST](https://projects.spring.io/spring-data-rest/) exposes t
 endpoints.
 
 `http://localhost:8080/` or  will give you an API browser to try out the different endpoints exposed by Spring Data REST
+
+## Building and Running the app
+
+### Setup
+
+#### Dependencies
+JDK 8 is the only dependency needed to build and run this project. Please make sure you have it installed correctly.
+
+#### IDE
+After cloning this repository, import the directory into your favorite IDE as a Maven project. 
+
+#### Non IDE 
+Run `./mvnw install` to install and `./mvnw build` to build the project
+
+### Running
+Run this with `./mvnw spring-boot:run` - this command will make the app available on 
+http://localhost:8080/ with an embedded Tomcat and H2 database with data imported using the 
+script in `src/main/resources/data.sql`.
