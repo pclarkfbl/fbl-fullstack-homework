@@ -5,6 +5,7 @@
  */
 package org.fastbridge.takehome.repository;
 
+import org.fastbridge.takehome.domain.School;
 import org.fastbridge.takehome.domain.SchoolClass;
 import org.springframework.data.repository.CrudRepository;
 
@@ -12,4 +13,7 @@ import org.springframework.data.repository.CrudRepository;
  * @author vivek
  */
 public interface SchoolClassRepository extends CrudRepository<SchoolClass, Long> {
+
+    Iterable<SchoolClass> findAllBySchool(School school);
+
 }
