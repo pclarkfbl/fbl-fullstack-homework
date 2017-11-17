@@ -1,3 +1,26 @@
+## Table of Contents
+- [Background and Context](#background-and-context)
+  * [Context](#context)
+  * [Good to know concepts](#good-to-know-concepts)
+  * [Components](#components)
+  * [Project architecture](#project-architecture)
+    + [Controllers and View](#controllers-and-view)
+      - [Controller](#controller)
+      - [View](#view)
+    + [Data layer](#data-layer)
+      - [Entities/Domains](#entitiesdomains)
+      - [Services & Repositories](#services--repositories)
+      - [Database](#database)
+  * [Helpful endpoints](#helpful-endpoints)
+    + [H2 console](#h2-console)
+    + [REST data API browser](#rest-data-api-browser)
+- [Building and Running the app](#building-and-running-the-app)
+  * [Setup](#setup)
+    + [Dependencies](#dependencies)
+    + [IDE](#ide)
+    + [Non IDE](#non-ide)
+  * [Running](#running)
+ 
 ## Background and Context
 ### Context
 
